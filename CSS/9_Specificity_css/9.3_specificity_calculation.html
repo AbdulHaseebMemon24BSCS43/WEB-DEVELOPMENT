@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity Calculation in CSS | WEB DEVELOPMENT</title>
+
+    <style>
+        .heading5 {
+            background-color: rgb(238, 255, 0);
+            color: rgb(25, 7, 0);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .cyellow {
+            color: rgb(212, 255, 0);
+        }
+
+        .cred {
+            color: rgb(255, 0, 0);
+        }
+
+        .cpurple {
+            color: rgb(52, 0, 97) !important;
+        }
+
+        [data-x="haseeb"] {
+            color: rgb(5, 25, 181);
+        }
+
+        /* ===== NEW SPECIFICITY EXAMPLE ===== */
+
+        /* 1 */
+        h2 {
+            color: blue;
+        }
+
+        /* 10 */
+        .title {
+            color: green;
+        }
+
+        /* 100 */
+        #main-title {
+            color: red;
+        }
+
+        /* 111 (highest → will win) */
+        div #main-title.title {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Heading -->
+    <h5 class="heading5">Specificity Calculation in CSS</h5>
+
+    <!-- Ordered List -->
+    <ol>
+        <li>Universal Selector: 0</li>
+        <li>Element selectors and pseudo-elements: 1</li>
+        <li>Class selectors, attribute selectors, and pseudo-classes: 10</li>
+        <li>ID selectors: 100</li>
+        <li>Inline styles: 1000</li>
+        <li>Then, add up the values of all the parts in the selector.</li>
+    </ol>
+
+    <br><br><br>
+
+    <!-- Attribute Selector Example -->
+    <div data-x="haseeb">
+        <h1>Hello Bro, I am Abdul Haseeb Memon - position & ORDER</h1>
+    </div>
+
+    <br><br>
+
+    <!-- !important Example -->
+    <div class="cred cpurple cyellow">
+        <h1>Hello Bro, I am Abdul Haseeb Memon - (!IMPORTANT;)</h1>
+    </div>
+
+    <br><br><br>
+
+    <!-- ===== NEW CALCULATION DEMO ===== -->
+    <div>
+        <h2 id="main-title" class="title">
+            Specificity Demo: Which color wins?
+        </h2>
+    </div>
+
+</body>
+
+</html>

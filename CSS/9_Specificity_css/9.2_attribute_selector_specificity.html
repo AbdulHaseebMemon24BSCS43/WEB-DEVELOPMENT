@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Specifity in CSS | WEB DEVELOPMENT</title>
+    <style>
+        
+        .heading5{
+            background-color: rgb(238, 255, 0);
+            color:rgb(25, 7, 0);
+            border:2px solid rgb(0, 0, 0);
+        }
+        .cyellow{
+            color:rgb(212, 255, 0);
+        }
+        .cred{
+            color:rgb(255, 0, 0);
+        }
+        .cpurple{
+            color:rgb(52, 0, 97) !important;
+        }
+        [data-x=haseeb]{
+            color:rgb(5, 25, 181);
+        }
+        
+    </style>
+</head>
+
+<body>
+    
+    <p>
+        <h5 class="heading5">Specificity IN CSS</h5>
+        <ol>
+            <li >Position and order of appearance: the order in which your CSS rules appear</li>
+            <li>Specificity: an algorithm that determines which CSS selector has the strongest match (inline > ID > class > element > universal)</li>
+            <li>Specificity: an algorithm that determines which CSS selector has the strongest match (inline > ID > class > element > universal)</li>
+            <li>Importance: some CSS rules are weighted more heavily than others, especially with the !important rule type</li>
+            
+        </ol>
+    </p>
+    <br> <br> <br>
+    <div data-x="haseeb">
+        <h1>Hello Bro, I am Abdul Haseeb Memon- position & ORDER</h1>
+    </div>
+    <BR><BR>
+    <div class="cred cpurple cyellow">
+        <h1>Hello Bro, I am Abdul Haseeb Memon- (!IMPORTANT;)</h1>
+    </div>
+
+
+</body>
+
+</html>

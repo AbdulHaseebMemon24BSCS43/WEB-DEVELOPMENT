@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Fonts  in CSS | WEB DEVELOPMENT</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap');
+
+        .fp{
+            font-family:'Mea Culpa';
+            font-style:'italic';
+            font-weight:1500;
+            font-size: 30px;
+            letter-spacing:20px;
+            line-height:30px;
+            text-transform: lowercase;
+            text-decoration: underline;
+            text-decoration-color: red;
+            text-decoration-style: dotted;
+            text-decoration-thickness:5px;
+        }
+        
+        .lorem{
+            border:2px solid red;
+            width: 45px;
+            text-overflow: ellipsis;
+            overflow:hidden;
+
+        }
+        .hello{
+            border:5px solid red;
+            width: 45px;
+            word-break:break-all;
+            text-align: center;
+        }
+       
+        /* //word-break
+         .lorem{
+            border:2px solid red;
+            width: 45px;
+            text-overflow: ellipsis;
+            overflow:hidden;
+
+        } */
+    </style>
+</head>
+
+<body>
+    
+    <div>
+        <p>hey my name is Abdul Haseeb Memon</p><span>This is before applying property</span>
+    </div>
+
+    <div class="fp">
+        <p>hey my name is Abdul Haseeb Memon</p><span>This is after applying property</span>
+    </div>
+<br><br>
+    <div class="lorem">
+        <p>My name is abdul Haseeb Memon founder @ Ternary Clown and I want you People to work on yourself rather than pointing out someone!
+        </p>
+    </div>
+<br><br>
+    <div class="hello">
+        <p>My name is abdul Haseeb Memon founder @ Ternary Clown and I want you People to work on yourself rather than pointing out someone!
+        </p>
+    </div>
+
+</body>
+
+</html>
